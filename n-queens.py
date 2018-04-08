@@ -3,7 +3,7 @@ zeile = [0,0,0,0]
 diag1 = [0,0,0,0,0,0,0]
 diag2 = [0,0,0,0,0,0,0]
 
-def setzedame(n, dame, zeile, diag1, diag2):
+def setzedame(n, zeile, diag1, diag2):
     pos = 0
     while pos < 4:
         d1=n+pos
@@ -14,12 +14,13 @@ def setzedame(n, dame, zeile, diag1, diag2):
                 zeile[pos]=1
                 diag1[d1] = 1
                 diag2[d2]=1
-                setzedame(n+1, dame[:], zeile[:], diag1[:], diag2[:])
+                setzedame(n+1, zeile[:], diag1[:], diag2[:])
                 zeile[pos]=0
                 diag1[d1] = 0
                 diag2[d2]=0
             else:
+                print('solution:')
                 print(dame)
         pos = pos + 1
 
-setzedame(0, dame, zeile, diag1, diag2)
+setzedame(0, zeile, diag1, diag2)
