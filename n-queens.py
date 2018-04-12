@@ -1,4 +1,6 @@
-N = 10
+from multiprocessing import Pool
+
+N = 12
 queens = bytearray([0]*N)
 row    = bytearray([1]*N)
 diag1  = bytearray([1]*(2*N-1))
@@ -31,12 +33,10 @@ def move_queen(n):
         pos += 1
     return solutions
 
-
-solutions = 0
-pos = 0
-while pos < N/2:
+def run(pos):
     queens[0] = pos
-    solutions += next_queen(0, pos, pos, pos+3)
-    pos += 1
+    return next_queen(0, pos, pos, pos+3)
 
-print(solutions*2)
+if __name__ == '__main__':
+    p = Pool(2)
+    print(2*sum(p.map(run, range(int(N/2)))))
