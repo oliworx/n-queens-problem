@@ -1,4 +1,6 @@
 # n-queens-problem
+[![Build Status](https://semaphoreci.com/api/v1/oliworx/n-queens-problem/branches/master/shields_badge.svg)](https://semaphoreci.com/oliworx/n-queens-problem)
+
 Just a matter for me to get in touch with the Python programming language
 
 ![visualisazion of the backtracking algorithm to solve the 8-queens-problem](https://upload.wikimedia.org/wikipedia/commons/1/1f/Eight-queens-animation.gif)
