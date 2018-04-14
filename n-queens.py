@@ -1,10 +1,10 @@
 from multiprocessing import Pool
 
 N = 14
-queens = bytearray([0]*N)
-row    = bytearray([1]*N)
-diag1  = bytearray([1]*(2*N-1))
-diag2  = bytearray([1]*(2*N-1))
+queens = bytearray([0] * N)
+row = bytearray([1] * N)
+diag1 = bytearray([1] * (2 * N - 1))
+diag2 = bytearray([1] * (2 * N - 1))
 
 def next_queen(n, pos, d1, d2):
     row[pos]  = 0
@@ -33,10 +33,13 @@ def move_queen(n):
         pos += 1
     return solutions
 
-def run(pos):
+def run_first_queen(pos):
     queens[0] = pos
     return next_queen(0, pos, pos, pos+3)
 
-if __name__ == '__main__':
+def run(num_queens):
     p = Pool(4)
-    print(2*sum(p.map(run, range(int(N/2)))))
+    return(2 * sum(p.map(run_first_queen, range(int(num_queens / 2)))))
+
+if __name__ == '__main__':
+    print run(N)
