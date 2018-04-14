@@ -12,7 +12,7 @@ Just a matter for me to get in touch with the Python programming language
 
 ## Usage
 
-from the project directory run ```python n-queens.py```
+from the project directory run ```python n_queens.py```
 
 The output is the number of valid solutions, including duplicates from mirroring and rotations.
 
