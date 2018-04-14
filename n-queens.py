@@ -1,6 +1,6 @@
 from multiprocessing import Pool
 
-N = 12
+N = 14
 queens = bytearray([0]*N)
 row    = bytearray([1]*N)
 diag1  = bytearray([1]*(2*N-1))
@@ -38,5 +38,5 @@ def run(pos):
     return next_queen(0, pos, pos, pos+3)
 
 if __name__ == '__main__':
-    p = Pool(2)
+    p = Pool(4)
     print(2*sum(p.map(run, range(int(N/2)))))
