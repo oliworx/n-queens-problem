@@ -3,7 +3,7 @@
 
 Just a matter for me to get in touch with the Python programming language
 
-![visualisazion of the backtracking algorithm to solve the 8-queens-problem](https://upload.wikimedia.org/wikipedia/commons/1/1f/Eight-queens-animation.gif)
+![visualization of the backtracking algorithm to solve the 8-queens-problem](https://upload.wikimedia.org/wikipedia/commons/1/1f/Eight-queens-animation.gif)
 ## Setup
 
 * clone the repo ```git clone https://github.com/oliworx/n-queens-problem.git```
